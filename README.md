@@ -4,12 +4,18 @@ This is gradle stuff added for [ExactCalculator](https://github.com/LineageOS/an
 
 Instructions
 ------------
+
 download and execute the calc.sh and import the gradle directory in android studio
 
 Credits
 -------
 
 [markgrey](https://github.com/markgray/ExactCalculator) - He provided the gradle files(I made minor modification)
+
+Updates
+-------
+
+I won´t update this repo
 
 Resposeability
 --------------
