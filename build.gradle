@@ -61,7 +61,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.lineageos.calculator2"
+        applicationId "com.android.calculator2"
     }
 
     buildTypes {
@@ -70,5 +70,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard.flags'
         }
     }
-    namespace 'org.lineageos.calculator2'
+    namespace 'com.android.calculator2'
 }
