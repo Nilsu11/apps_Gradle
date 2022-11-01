@@ -45,9 +45,9 @@ android {
         main {
             manifest.srcFile '../AndroidManifest.xml'
 
-            aidl.srcDirs = ['../src', '../../crcalc/src']
+            aidl.srcDirs = ['../src', '../crcalc/src']
             assets.srcDirs = ['../assets']
-            java.srcDirs = ['../src', '../../crcalc/src']
+            java.srcDirs = ['../src', '../crcalc/src']
             res.srcDirs = ['../res']
             resources.srcDirs = ['../res']
         }
