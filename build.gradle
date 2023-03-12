@@ -61,7 +61,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.android.calculator2"
+        applicationId "net.crdroid.calculator2"
     }
 
     buildTypes {
@@ -70,5 +70,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard.flags'
         }
     }
-    namespace 'com.android.calculator2'
+    namespace 'net.crdroid.calculator2'
 }
