@@ -58,10 +58,7 @@ android {
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 33
-    }
-
-    defaultConfig {
-        applicationId "net.crdroid.calculator2"
+        applicationId "com.android.calculator2"
     }
 
     buildTypes {
@@ -70,5 +67,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard.flags'
         }
     }
-    namespace 'net.crdroid.calculator2'
+    namespace 'io.github.Nilsu11.calculator2'
 }
