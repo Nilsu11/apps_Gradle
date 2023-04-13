@@ -1,16 +1,11 @@
 # apps_Gradle
 
-This is gradle stuff added for [ExactCalculator](https://github.com/crdroidandroid/android_packages_apps_ExactCalculator)
+This is gradle stuff added for [Camera2](https://github.com/LineageOS/android_packages_apps_Camera2)
 
 Instructions
 ------------
 
-download and execute the calc.sh and import the gradle directory in android studio
-
-Credits
--------
-
-[markgrey](https://github.com/markgray/ExactCalculator) - He provided the gradle files(I made minor modification)
+download and execute the cam.sh and import the gradle directory in android studio
 
 Updates
 -------
