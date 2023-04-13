@@ -20,55 +20,49 @@ allprojects {
     }
 }
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
 
-repositories {
-    google()
-    mavenCentral()
+android {
+
+    defaultConfig {
+        applicationId "com.android.camera2"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 20002000
+        versionName "2.0.002"
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs '../src', '../quickReader/src', '../src_pd', '../src_pd_gcam'
+            resources.srcDirs '../res', '../res_p', '../quickReader/res'
+            res.srcDirs '../res', '../res_p', '../quickReader/res'
+        }
+    }
+
+    externalNativeBuild {
+        // Define the Android.mk file for building the JNI libraries
+        ndkBuild {
+            path 'Android.mk'
+        }
+    }
+    'namespace io.github.nilsu11.camera2'
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation "androidx.appcompat:appcompat:1.5.1"
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation "androidx.preference:preference-ktx:1.2.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
-//    implementation "cr"
+    implementation 'androidx.core:core:1.7.0'
+    implementation 'androidx.camera:camera-camera2:1.2.0-alpha04'
+    implementation 'com.adobe.xmp:xmpcore:6.1.10'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.google.guava:guava:31.0.1-android'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.google.aperture:aperture:1.0.0'
+
+    // Optional library
+    implementation 'org.apache.http.legacy:legacy-httpclient:1.0.0'
+
+    // JNI libraries will be built separately
 }
 
-android {
-    sourceSets {
-        main {
-            manifest.srcFile '../AndroidManifest.xml'
-
-            aidl.srcDirs = ['../src', '../crcalc/src']
-            assets.srcDirs = ['../assets']
-            java.srcDirs = ['../src', '../crcalc/src']
-            res.srcDirs = ['../res']
-            resources.srcDirs = ['../res']
-        }
-    }
-
-    compileSdkVersion 33
-
-    defaultConfig {
-        minSdkVersion 26
-        targetSdkVersion 33
-    }
-
-    defaultConfig {
-        applicationId "net.crdroid.calculator2"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard.flags'
-        }
-    }
-    namespace 'net.crdroid.calculator2'
-}
