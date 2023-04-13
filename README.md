@@ -1,4 +1,4 @@
-# ExactCalcGradle
+# apps_Gradle
 
 This is gradle stuff added for [ExactCalculator](https://github.com/crdroidandroid/android_packages_apps_ExactCalculator)
 
