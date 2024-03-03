@@ -24,7 +24,7 @@ apply plugin: 'com.android.application'
 android {
 
     defaultConfig {
-        applicationId "com.android.camera2"
+        applicationId "io.github.nilsu11.camera2"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 20002000
@@ -33,7 +33,7 @@ android {
 
     sourceSets {
         main {
-            java.srcDirs '../src', '../quickReader/src', '../src_pd', '../src_pd_gcam'
+            java.srcDirs '../src', '../quickReader/src', '../src_pd', '../src_pd_gcam', 'ex/camera2/portability/src'
             resources.srcDirs '../res', '../res_p', '../quickReader/res'
             res.srcDirs '../res', '../res_p', '../quickReader/res'
         }
@@ -45,7 +45,7 @@ android {
             path 'Android.mk'
         }
     }
-    'namespace io.github.nilsu11.camera2'
+    namespace 'com.android.camera2'
 }
 
 dependencies {
